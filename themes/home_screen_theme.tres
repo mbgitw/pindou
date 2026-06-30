@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://vxk6v2d6ysrd"]
+[gd_resource type="Theme" format=3 uid="uid://vxk6v2d6ysrd"]
 
-[ext_resource type="FontFile" path="res://font/方正胖头鱼简体.TTF" id="1_font"]
+[ext_resource type="FontFile" uid="uid://1fxjcl6c0o85" path="res://font/方正胖头鱼简体.TTF" id="1_font"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxFlat_home_card"]
 content_margin_left = 28.0

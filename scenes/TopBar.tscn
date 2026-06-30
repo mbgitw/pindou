@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnodroqxvf2v5"]
 
-[ext_resource type="Theme" path="res://themes/top_bar_theme.tres" id="1_top_theme"]
+[ext_resource type="Theme" uid="uid://beh2xuj6i06wx" path="res://themes/top_bar_theme.tres" id="1_top_theme"]
 [ext_resource type="Texture2D" uid="uid://bvrmotof45y47" path="res://textures/staniba_bar.png" id="2_vdbop"]
 [ext_resource type="Texture2D" uid="uid://nlayrn1fnq26" path="res://textures/staniba_bolt.png" id="3_vdbop"]
 [ext_resource type="Texture2D" uid="uid://5kmccvlae484" path="res://textures/staniba_plus.png" id="4_wjcpy"]
@@ -97,3 +97,35 @@ mouse_filter = 2
 texture = ExtResource("4_wjcpy")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="Jump" type="TextureRect" parent="StaminaBar" unique_id=187970002]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 111.25
+offset_right = 328.75
+offset_bottom = 87.0
+grow_horizontal = 2
+mouse_filter = 0
+texture = ExtResource("2_vdbop")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="StaminaBar/Jump" unique_id=771230325]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.75
+offset_top = -23.5
+offset_right = 75.25
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"TopBarStaminaCount"
+text = "跳过关卡"
+horizontal_alignment = 1
+vertical_alignment = 1

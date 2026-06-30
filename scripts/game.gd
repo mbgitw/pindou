@@ -1,5 +1,7 @@
 extends Control
 
+signal level_complete_sweep_finished
+
 class BoardCanvas extends Control:
 	var owner_game: Control
 
@@ -33,6 +35,13 @@ const START_UNLOCKED_SLOTS: int = 12
 const UNLOCK_PER_COMPLETED_REGION: int = 2
 const BOARD_GAP: int = 0
 const STORAGE_GAP: int = 6
+const STORAGE_UNLOCK_VIBRATION_MS: int = 80
+const STORAGE_UNLOCK_POP_START_SCALE: float = 0.82
+const STORAGE_UNLOCK_POP_PEAK_SCALE: float = 1.18
+const STORAGE_UNLOCK_POP_IN_DURATION: float = 0.10
+const STORAGE_UNLOCK_POP_OUT_DURATION: float = 0.12
+const STORAGE_UNLOCK_POP_BETWEEN_DELAY: float = 0.02
+const STORAGE_FILLED_SLOT_DARKEN_AMOUNT: float = 0.32
 const EMPTY_COLOR: int = -1
 const BOARD_SOURCE: String = "board"
 const STORAGE_SOURCE: String = "storage"
@@ -45,12 +54,15 @@ const SFX_PUTIN: String = "putin"
 const SFX_GETIN: String = "getin"
 const SFX_COMPLETE: String = "complete"
 const SFX_VICTORY: String = "victory"
+const SFX_TIP: String = "tip"
+const SFX_SELL: String = "sell"
 const FLY_DURATION: float = 0.04
 const FLY_GAP: float = 0.012
 const FLYER_MIN_SIZE: float = 22.0
 const FLYER_MAX_SIZE: float = 44.0
 const BEAN_PLACE_ANIMATION_FPS: float = 30.0
 const BEAN_PLACE_ANIMATION_FRAMES: int = 7
+const LEVEL_COMPLETE_SWEEP_STEP: float = 0.028
 const BOARD_TEXTURE_SCALE: float = 1.0
 const GEM_TEXTURE_SCALE: float = 246.0 / 256.0
 const SELECTED_GEM_LIFT_RATIO: float = 0.20
@@ -80,6 +92,10 @@ const STAMINA_RECOVERY_SECONDS: int = 30 * 60
 const SHOW_STAMINA_WIDGET: bool = true
 const STAMINA_FLOAT_TEXT_DURATION: float = 0.72
 const STAMINA_FLOAT_TEXT_RISE: float = 58.0
+const HARD_LEVEL_ACTIVE_CELL_THRESHOLD: int = 876
+const HARD_LEVEL_HINT_TEXT: String = "超难关卡来袭"
+const HARD_LEVEL_HINT_HOLD_DURATION: float = 1.0
+const HARD_LEVEL_HINT_Y_OFFSET: float = -100.0
 # Turn this off before release builds.
 const DEV_MODE: bool = false
 
@@ -125,6 +141,7 @@ var level_data: Dictionary = {}
 var current_level_index: int = 0
 var level_width: int = 0
 var level_height: int = 0
+var level_active_cell_count: int = 0
 var level_colors: Array[Color] = []
 var level_color_names: Array[String] = []
 var level_color_lookup: Dictionary = {}
@@ -136,6 +153,9 @@ var selected_source: String = ""
 var selected_color: int = EMPTY_COLOR
 var selected_positions: Array = []
 var is_animating: bool = false
+var is_playing_level_complete_sweep: bool = false
+var level_complete_sweep_launching: bool = false
+var level_complete_sweep_active_count: int = 0
 var game_started: bool = false
 var current_screen: String = SCREEN_HOME
 var game_won_announced: bool = false
@@ -196,6 +216,7 @@ var catalog_back_button: Button
 var stamina_widget: Control
 var stamina_count_label: Label
 var stamina_timer_label: Label
+var stamina_jump_button: Control
 var stamina_tick_timer: Timer
 var dev_panel: PanelContainer
 var dev_level_label: Label
@@ -384,6 +405,10 @@ func _create_stamina_widget() -> void:
 
 	stamina_count_label = stamina_widget.find_child("StaminaCount", true, false) as Label
 	stamina_timer_label = stamina_widget.find_child("StaminaTimer", true, false) as Label
+	stamina_jump_button = stamina_widget.find_child("Jump", true, false) as Control
+	if stamina_jump_button != null:
+		stamina_jump_button.mouse_filter = Control.MOUSE_FILTER_STOP
+		stamina_jump_button.gui_input.connect(_on_stamina_jump_gui_input)
 	_refresh_stamina_ui()
 
 
@@ -394,6 +419,15 @@ func _create_stamina_timer() -> void:
 	stamina_tick_timer.autostart = true
 	stamina_tick_timer.timeout.connect(_on_stamina_tick)
 	add_child(stamina_tick_timer)
+
+
+func _on_stamina_jump_gui_input(event: InputEvent) -> void:
+	if event is InputEventScreenTouch and event.pressed:
+		_skip_current_level()
+		return
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_skip_current_level()
+		return
 
 
 func _create_dev_panel() -> void:
@@ -718,6 +752,7 @@ func _resize_cells() -> void:
 	for slot_background in storage_slot_textures:
 		slot_background.size = Vector2(storage_cell_size, storage_cell_size)
 		slot_background.position = Vector2.ZERO
+		slot_background.pivot_offset = slot_background.size * 0.5
 
 	for index in range(storage_gem_textures.size()):
 		var gem_texture: TextureRect = storage_gem_textures[index]
@@ -1043,6 +1078,64 @@ func _load_current_level_for_play(should_restore_progress: bool = true) -> void:
 		_load_progress()
 
 	_refresh_all()
+	_show_hard_level_hint_if_needed()
+
+
+func _show_hard_level_hint_if_needed() -> void:
+	if tutorial_active or current_screen != SCREEN_LEVEL:
+		return
+	if level_active_cell_count < HARD_LEVEL_ACTIVE_CELL_THRESHOLD:
+		return
+
+	call_deferred("_show_hard_level_hint")
+
+
+func _show_hard_level_hint() -> void:
+	if current_screen != SCREEN_LEVEL or tutorial_active:
+		return
+
+	_play_sfx(SFX_TIP)
+	var hint_label: Label = Label.new()
+	hint_label.name = "HardLevelHint"
+	hint_label.text = HARD_LEVEL_HINT_TEXT
+	hint_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	hint_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	hint_label.add_theme_color_override("font_color", Color("#fff6dc"))
+	hint_label.add_theme_color_override("font_shadow_color", Color("#111111"))
+	hint_label.add_theme_constant_override("shadow_offset_x", 0)
+	hint_label.add_theme_constant_override("shadow_offset_y", 5)
+	hint_label.add_theme_font_size_override("font_size", 58)
+	hint_label.size = Vector2(520.0, 96.0)
+	hint_label.position = size * 0.5 - hint_label.size * 0.5 + Vector2(0.0, HARD_LEVEL_HINT_Y_OFFSET)
+	hint_label.pivot_offset = hint_label.size * 0.5
+	hint_label.scale = Vector2(0.62, 0.62)
+	hint_label.modulate.a = 0.0
+	add_child(hint_label)
+	move_child(hint_label, get_child_count() - 1)
+
+	var appear_tween: Tween = create_tween()
+	appear_tween.set_parallel(true)
+	appear_tween.tween_property(hint_label, "modulate:a", 1.0, 0.16).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	appear_tween.tween_property(hint_label, "scale", Vector2(1.22, 1.22), 0.20).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	appear_tween.chain().tween_property(hint_label, "scale", Vector2(0.96, 0.96), 0.10).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	appear_tween.tween_property(hint_label, "scale", Vector2.ONE, 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	appear_tween.finished.connect(_hide_hard_level_hint.bind(hint_label))
+
+
+func _hide_hard_level_hint(hint_label: Label) -> void:
+	if hint_label == null or not is_instance_valid(hint_label):
+		return
+
+	await get_tree().create_timer(HARD_LEVEL_HINT_HOLD_DURATION).timeout
+	if hint_label == null or not is_instance_valid(hint_label):
+		return
+
+	var disappear_tween: Tween = create_tween()
+	disappear_tween.set_parallel(true)
+	disappear_tween.tween_property(hint_label, "scale", Vector2(0.0, 0.0), 0.34).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	disappear_tween.tween_property(hint_label, "modulate:a", 0.0, 0.24).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	disappear_tween.finished.connect(hint_label.queue_free)
 
 
 func _advance_to_next_level() -> void:
@@ -1054,6 +1147,44 @@ func _advance_to_next_level() -> void:
 		_refresh_dev_panel()
 
 	_show_home_screen()
+
+
+func _skip_current_level() -> void:
+	if current_screen != SCREEN_LEVEL or tutorial_active or is_animating or game_won_announced:
+		return
+
+	is_animating = true
+	_clear_selection()
+	_clear_fly_layer()
+	_complete_current_level_board()
+	game_won_announced = true
+	_refresh_all()
+	_save_progress()
+
+	await _play_level_complete_sequence()
+	is_animating = false
+	_advance_to_next_level()
+
+
+func _complete_current_level_board() -> void:
+	for y in range(level_height):
+		for x in range(level_width):
+			var cell: Dictionary = board_cells[y][x]
+			if not cell["active"]:
+				continue
+
+			cell["current_color"] = int(cell["target_color"])
+
+	for index in range(STORAGE_SIZE):
+		storage_slots[index]["current_color"] = EMPTY_COLOR
+		storage_slots[index]["unlocked"] = true
+
+	unlocked_slots = STORAGE_SIZE
+	storage_color_order.clear()
+	completed_regions.clear()
+	for region_id in level_active_regions:
+		completed_regions[region_id] = true
+	_rebuild_region_completion_cache()
 
 
 func _return_to_home() -> void:
@@ -1296,6 +1427,7 @@ func _load_level(path: String) -> void:
 		_register_level_color_alias(region_id, target_color)
 
 	_register_color_regions_from_map()
+	level_active_cell_count = _count_active_level_cells()
 	_validate_level_data(path)
 
 
@@ -1315,6 +1447,16 @@ func _register_color_regions_from_map() -> void:
 
 			if COLOR_IDS.has(region_id):
 				level_region_targets[region_id] = _color_value_to_index(region_id)
+
+
+func _count_active_level_cells() -> int:
+	var count: int = 0
+	for y in range(level_height):
+		for x in range(level_width):
+			if _get_level_grid_value("region_map", Vector2i(x, y)) != null:
+				count += 1
+
+	return count
 
 
 func _normalize_level_grid(rows_name: String, grid_name: String) -> void:
@@ -1576,6 +1718,7 @@ func _consume_stamina(amount: int) -> bool:
 	stamina_last_update_unix = _get_unix_time()
 	_refresh_stamina_ui()
 	_show_stamina_cost_float(amount)
+	_play_sfx(SFX_SELL)
 	_save_navigation_state()
 	return true
 
@@ -1796,6 +1939,9 @@ func _new_game(should_refresh: bool = true) -> void:
 	completed_regions.clear()
 	region_completion_cache.clear()
 	board_gem_animation_frames.clear()
+	is_playing_level_complete_sweep = false
+	level_complete_sweep_launching = false
+	level_complete_sweep_active_count = 0
 	unlocked_slots = level_initial_unlocked
 	game_won_announced = false
 	board_cells = []
@@ -2136,9 +2282,6 @@ func _start_fill_sequence(moves: Array[Dictionary], fill_count: int, should_sort
 		if can_play_storage_reorder_sfx and _should_play_storage_reorder_sfx(storage_before_sort):
 			_play_sfx(SFX_GETIN)
 
-	if fills_board:
-		_play_sfx(SFX_FILL)
-
 	var newly_completed_regions: Array[String] = _update_region_completion_and_unlocks()
 	if not newly_completed_regions.is_empty():
 		_play_region_flash(newly_completed_regions)
@@ -2146,16 +2289,21 @@ func _start_fill_sequence(moves: Array[Dictionary], fill_count: int, should_sort
 	var should_finish_level: bool = false
 	if _is_game_complete() and not game_won_announced:
 		game_won_announced = true
-		_play_sfx(SFX_VICTORY)
 		should_finish_level = true
 	elif not newly_completed_regions.is_empty():
 		_play_sfx(SFX_COMPLETE)
+
+	if fills_board and not should_finish_level:
+		_play_sfx(SFX_FILL)
 
 	is_animating = false
 	_refresh_all()
 	_save_progress()
 	_after_tutorial_fill_finished(fills_board)
 	if should_finish_level and not tutorial_active:
+		is_animating = true
+		await _play_level_complete_sequence()
+		is_animating = false
 		_advance_to_next_level()
 
 
@@ -2303,7 +2451,7 @@ func _get_remapped_bean_texture(source_texture: Texture2D, color_index: int) -> 
 
 
 func _play_board_gem_place_animation(pos: Vector2i) -> void:
-	if bean_animation_textures.is_empty():
+	if bean_animation_textures.is_empty() or is_playing_level_complete_sweep:
 		return
 
 	_run_board_gem_place_animation(pos)
@@ -2326,6 +2474,56 @@ func _run_board_gem_place_animation(pos: Vector2i) -> void:
 	_refresh_board()
 
 
+func _play_level_complete_sequence() -> void:
+	var fill_sfx_player: AudioStreamPlayer = _play_sfx(SFX_FILL)
+	await _play_level_complete_sweep()
+	await _wait_for_sfx_player(fill_sfx_player)
+	var victory_sfx_player: AudioStreamPlayer = _play_sfx(SFX_VICTORY)
+	await _wait_for_sfx_player(victory_sfx_player)
+
+
+func _play_level_complete_sweep() -> void:
+	if bean_animation_textures.is_empty():
+		return
+
+	is_playing_level_complete_sweep = true
+	level_complete_sweep_launching = true
+	level_complete_sweep_active_count = 0
+	board_gem_animation_frames.clear()
+	var max_diagonal: int = level_width + level_height - 2
+	for diagonal in range(max_diagonal + 1):
+		for y in range(level_height):
+			var x: int = diagonal - y
+			if x < 0 or x >= level_width:
+				continue
+
+			var pos: Vector2i = Vector2i(x, y)
+			var cell: Dictionary = _get_board_cell(pos)
+			if not cell["active"] or int(cell["current_color"]) == EMPTY_COLOR:
+				continue
+
+			level_complete_sweep_active_count += 1
+			_run_board_gem_place_animation_for_sweep(pos)
+
+		await get_tree().create_timer(LEVEL_COMPLETE_SWEEP_STEP).timeout
+
+	level_complete_sweep_launching = false
+	if level_complete_sweep_active_count > 0:
+		await level_complete_sweep_finished
+
+	board_gem_animation_frames.clear()
+	is_playing_level_complete_sweep = false
+	level_complete_sweep_active_count = 0
+	_refresh_board()
+
+
+func _run_board_gem_place_animation_for_sweep(pos: Vector2i) -> void:
+	await _run_board_gem_place_animation(pos)
+	level_complete_sweep_active_count = max(level_complete_sweep_active_count - 1, 0)
+	if not level_complete_sweep_launching and level_complete_sweep_active_count == 0:
+		level_complete_sweep_finished.emit()
+
+
 func _update_region_completion_and_unlocks() -> Array[String]:
 	_rebuild_region_completion_cache()
 	var newly_completed_regions: Array[String] = []
@@ -2338,9 +2536,11 @@ func _update_region_completion_and_unlocks() -> Array[String]:
 			newly_completed_regions.append(region_id)
 
 	if not newly_completed_regions.is_empty():
+		var previous_unlocked_slots: int = unlocked_slots
 		unlocked_slots = min(STORAGE_SIZE, unlocked_slots + newly_completed_regions.size() * level_unlock_per_completed_region)
 		for index in range(STORAGE_SIZE):
 			storage_slots[index]["unlocked"] = index < unlocked_slots
+		_play_storage_unlock_feedback(previous_unlocked_slots, unlocked_slots)
 
 	return newly_completed_regions
 
@@ -2402,6 +2602,31 @@ func _play_region_flash(region_ids: Array[String]) -> void:
 			tween.tween_property(flash, "modulate:a", 0.0, 0.34).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 			tween.tween_property(flash, "scale", Vector2(1.16, 1.16), 0.34).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 			tween.finished.connect(flash.queue_free)
+
+
+func _play_storage_unlock_feedback(from_count: int, to_count: int) -> void:
+	if to_count <= from_count:
+		return
+
+	Input.vibrate_handheld(STORAGE_UNLOCK_VIBRATION_MS)
+	var tween: Tween = create_tween()
+	for index in range(from_count, min(to_count, STORAGE_SIZE)):
+		_append_storage_slot_unlock_pop(tween, index)
+		tween.tween_interval(STORAGE_UNLOCK_POP_BETWEEN_DELAY)
+
+
+func _append_storage_slot_unlock_pop(tween: Tween, index: int) -> void:
+	if index < 0 or index >= storage_slot_textures.size():
+		return
+
+	var slot_background: TextureRect = storage_slot_textures[index]
+	if slot_background == null:
+		return
+
+	slot_background.pivot_offset = slot_background.size * 0.5
+	tween.tween_property(slot_background, "scale", Vector2.ONE * STORAGE_UNLOCK_POP_START_SCALE, 0.0)
+	tween.tween_property(slot_background, "scale", Vector2.ONE * STORAGE_UNLOCK_POP_PEAK_SCALE, STORAGE_UNLOCK_POP_IN_DURATION).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(slot_background, "scale", Vector2.ONE, STORAGE_UNLOCK_POP_OUT_DURATION).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
 
 func _find_connected_board_color(start: Vector2i, color: int) -> Array:
@@ -2604,6 +2829,8 @@ func _setup_audio() -> void:
 	sfx_streams[SFX_GETIN] = load("res://sounds/game-getin.mp3")
 	sfx_streams[SFX_COMPLETE] = load("res://sounds/game-complate.mp3")
 	sfx_streams[SFX_VICTORY] = load("res://sounds/game-complate.mp3")
+	sfx_streams[SFX_TIP] = load("res://sounds/tip.mp3")
+	sfx_streams[SFX_SELL] = load("res://sounds/sell.mp3")
 
 	for index in range(SFX_PLAYER_COUNT):
 		var player: AudioStreamPlayer = AudioStreamPlayer.new()
@@ -2613,9 +2840,9 @@ func _setup_audio() -> void:
 		sfx_players.append(player)
 
 
-func _play_sfx(name: String) -> void:
+func _play_sfx(name: String) -> AudioStreamPlayer:
 	if not sfx_streams.has(name) or sfx_players.is_empty():
-		return
+		return null
 
 	var player: AudioStreamPlayer = sfx_players[sfx_player_index]
 	sfx_player_index = (sfx_player_index + 1) % sfx_players.size()
@@ -2623,6 +2850,16 @@ func _play_sfx(name: String) -> void:
 	player.stream = sfx_streams[name]
 	player.volume_db = SFX_PUTIN_VOLUME_DB if name == SFX_PUTIN else SFX_DEFAULT_VOLUME_DB
 	player.play()
+	return player
+
+
+func _wait_for_sfx_player(player: AudioStreamPlayer) -> void:
+	if player == null:
+		return
+	if not player.playing:
+		return
+
+	await player.finished
 
 
 func _refresh_all() -> void:
@@ -2650,7 +2887,7 @@ func _refresh_storage() -> void:
 		button.text = ""
 		button.disabled = not unlocked
 		slot_background.visible = true
-		slot_background.modulate = Color.WHITE if unlocked else Color("#676a70")
+		slot_background.modulate = _get_storage_slot_tint(color, unlocked)
 		gem_texture.visible = unlocked and color != EMPTY_COLOR
 		gem_texture.texture = _get_remapped_bean_texture(bean_texture, color) if color != EMPTY_COLOR else bean_texture
 		gem_texture.modulate = Color.WHITE
@@ -2658,6 +2895,15 @@ func _refresh_storage() -> void:
 		var gem_base_position: Vector2 = storage_gem_base_positions[index]
 		var lift_offset: float = gem_texture.size.y * SELECTED_GEM_LIFT_RATIO if is_selected else 0.0
 		gem_texture.position = gem_base_position - Vector2(0.0, lift_offset)
+
+
+func _get_storage_slot_tint(color: int, unlocked: bool) -> Color:
+	if not unlocked:
+		return Color("#676a70")
+	if color == EMPTY_COLOR:
+		return Color.WHITE
+
+	return _get_level_color(color).darkened(STORAGE_FILLED_SLOT_DARKEN_AMOUNT)
 
 
 func _refresh_status() -> void:

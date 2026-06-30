@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.76256007, 0.97451276, 0.9505109, 1)
+color = Color(0.941176, 0.937255, 1, 1)
 
 [node name="HeroGlow" type="ColorRect" parent="." unique_id=1983169984]
 layout_mode = 1
