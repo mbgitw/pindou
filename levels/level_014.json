@@ -1,0 +1,94 @@
+{
+  "id": "level_014",
+  "name": "Duck Jewel",
+  "width": 24,
+  "height": 24,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "B": "BR",
+    "D": "DK",
+    "K": "BK",
+    "R": "RD",
+    "S": "SK",
+    "W": "WT",
+    "Y": "YL"
+  },
+  "regions": {
+    "BR": {
+      "target_color": "#9d6f5c"
+    },
+    "DK": {
+      "target_color": "#6f544d"
+    },
+    "BK": {
+      "target_color": "#303030"
+    },
+    "RD": {
+      "target_color": "#f06b71"
+    },
+    "SK": {
+      "target_color": "#f2f7fb"
+    },
+    "WT": {
+      "target_color": "#ffffff"
+    },
+    "YL": {
+      "target_color": "#f6c84f"
+    }
+  },
+  "region_rows": [
+    ".........KKKKKK.........",
+    "......KKKBYYYYYKKK......",
+    ".....KYYYYYYYYYYYYK.....",
+    "....KYYYYYYYYYYYYYYK....",
+    "...KYBBYYYYYYYYBBBYYK...",
+    "..KYBYYYYYYYYYYYYYBYYK..",
+    ".KYBYYYYBBBYYBYYYYYBYYK.",
+    ".KYBBBYYBBBBBBYYBBBBYYK.",
+    ".KBSSSBBBBBBBBBDSSSSBYK.",
+    "KBSSWWSDBBBBBBDSWWSSBYYK",
+    "KBSWWWWDBDBBBBDWWWWWSBYK",
+    "KBSWWWWSDBBBBDSWWWSSSBYK",
+    "KBSSSWWWDBBBDDWWWWSSSBYK",
+    "KBSKDWWWDBBBBSWWWSKKSBYK",
+    "KBSKKSWWDBBBBDWWWSKKSBYK",
+    ".KSKKWWSSBBBBSWWWSKKSBK.",
+    ".KBSWWWDYBBYYBBWSSSWBRK.",
+    ".KRBSSSBYYYYYYYBWSSBRRK.",
+    "..KRBBBYYYYYYYYYBBBRRK..",
+    "...KRRRYYYYYYYYYRRRRK...",
+    "....KRYYYYYYYYYYYRRK....",
+    ".....KYYYYBBBBYYYYK.....",
+    "......KKKBYYYYYKKK......",
+    ".........KKKKKK........."
+  ],
+  "initial_rows": [
+    ".........BBBBBB.........",
+    "......BBBKBBBBKBBB......",
+    ".....BBBBBBBBBKKKKB.....",
+    "....BBBBBBBBBBBKKKKB....",
+    "...BBDDBBBBBBBBKKKKKB...",
+    "..DBDBBBBBBBBBBKKKKKKW..",
+    ".DBDDBBBDWWBBKBKKKKKKKW.",
+    ".SDDDDBBDWWWKKBBKKKKKKW.",
+    ".SSBBBSSSWWWWWKBKKKKKKW.",
+    "SSDBBBBBYYYWWWBBKKKKKKKW",
+    "SSDSSBBBYBYYWWBBKKKKKKKW",
+    "SSDSSSBBBYYYYBBBBKKKKKKW",
+    "SSYYYSYYYYYYYBBBBKKKKKKW",
+    "SSYSSYYYYYYYYYYYYWWWKKKW",
+    "SSYSYYYYYYYYYYYYYYWWWKKW",
+    ".SYYYYYYYYYYYYYYYYYWWWW.",
+    ".SYYYYYYSYYBWYYYYYYYYWW.",
+    ".YYYYYYYSSBBWWWYYYYYYYR.",
+    "..YYYYYSSSSWWWWWYYYYYY..",
+    "...YYYYSSSSWWWRRYYYYY...",
+    "....YYSSSSSRRRRRRYYY....",
+    ".....YSSSSYYYYRRRRY.....",
+    "......YYYYSRRRRYYY......",
+    ".........YYYYYY........."
+  ]
+}

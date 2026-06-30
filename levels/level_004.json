@@ -1,0 +1,90 @@
+{
+  "id": "level_008",
+  "name": "Girl Jewel",
+  "width": 18,
+  "height": 20,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "D": "DK",
+    "G": "GN",
+    "K": "BK",
+    "M": "MG",
+    "N": "BR",
+    "O": "OR",
+    "P": "PN",
+    "S": "SK"
+  },
+  "regions": {
+    "DK": {
+      "target_color": "#372d2d"
+    },
+    "GN": {
+      "target_color": "#a6d878"
+    },
+    "BK": {
+      "target_color": "#736b46"
+    },
+    "MG": {
+      "target_color": "#ea557a"
+    },
+    "BR": {
+      "target_color": "#a05a2d"
+    },
+    "OR": {
+      "target_color": "#eb7337"
+    },
+    "PN": {
+      "target_color": "#f7bfd0"
+    },
+    "SK": {
+      "target_color": "#ffe1b9"
+    }
+  },
+  "region_rows": [
+    ".....KKKKKKK......",
+    "....KDDDDDDDKK.K..",
+    "...KDDDKKDDDDKKMK.",
+    "..KDDKKDDKKDDDMKK.",
+    "..KDKSSSSSSKKDKMK.",
+    "..KDKSSSSSSSSKDK..",
+    "..KDKSDSSSSDSKDK..",
+    "..KDKSDSSSSDSKDK..",
+    "..KDKSGNGGNGSKDK..",
+    ".KDDKKGNGGNGKKDDK.",
+    ".KDDKDKKSSKKDKDDK.",
+    "KDDKDKKMKKMKKDKDDK",
+    "KODKKDKMPMMKDKKDOK",
+    "KOOKDDKNNNNKDDKOOK",
+    "KOKDDDKMPMMKDDDKOK",
+    ".KKSKDKPMMMKDKSKK.",
+    "...KDDKMMMMKDDK...",
+    "...KKKMPPPPMKKK...",
+    ".....KDDKKDDK.....",
+    "......KK..KK......"
+  ],
+  "initial_rows": [
+    ".....DDDDDDD......",
+    "....DSSKKKKKDS.S..",
+    "...DSKKDMMKKKSSKS.",
+    "..DSSDDMMMMKKKKSS.",
+    "..DSDKMMMMMMDKDKS.",
+    "..DKDKKMMMMKKDKS..",
+    "..DKDKKMMMMKKDKS..",
+    "..DKDKPPPPKKKDKS..",
+    "..DKDKKPPPKKKDKS..",
+    ".DKKDDKKKKKKDDKKS.",
+    ".DKKDKDDKKDDKDKKS.",
+    "DKKDKDDKDDKDDKDKKS",
+    "DKNNDKDKKKKDKDDKKS",
+    "DNNNNKDKKKKDKKOKKS",
+    "DKNNKKDKKKKDKKOOKS",
+    ".DDKDKDKKKKDKOOOO.",
+    "...DKKDKGGKDKKO...",
+    "...DDDKGGGGKSSS...",
+    ".....DKKGGKKS.....",
+    "......SS..SS......"
+  ]
+}

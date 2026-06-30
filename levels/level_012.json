@@ -1,0 +1,92 @@
+{
+  "id": "level_012",
+  "name": "Cat Jewel",
+  "width": 24,
+  "height": 25,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "C": "CR",
+    "D": "DR",
+    "K": "BK",
+    "L": "SH",
+    "M": "MG",
+    "N": "TN"
+  },
+  "regions": {
+    "CR": {
+      "target_color": "#e6d6c2"
+    },
+    "DR": {
+      "target_color": "#8b1830"
+    },
+    "BK": {
+      "target_color": "#202020"
+    },
+    "SH": {
+      "target_color": "#b9ad9c"
+    },
+    "MG": {
+      "target_color": "#cf58ab"
+    },
+    "TN": {
+      "target_color": "#bd8f55"
+    }
+  },
+  "region_rows": [
+    "...KK............KKK....",
+    "..KLNK..........KNNMK...",
+    "..KMLNKK.......KNNMLK...",
+    "..KMMLNLKKKKKKKKCCCLK...",
+    "..KMMMLLLNNNNNNCCCCCK...",
+    "..KMMMNLNNNNNNCCCKKCCK..",
+    "..KMMMMLNKKKNCLLLCCCCK..",
+    "...KMMLNNNNCCCCLCCCCCLK.",
+    "...KMLLNNNCCKKKKKKKCCCLK",
+    "....KNNNNCCKKLLLLLKKCCLK",
+    "....KLNCCCKKDLDLLLLLCCLK",
+    "....KLLLLCKDLDLLDDDLCCCK",
+    "....KLLLCCKDDDDLLLLLCCCK",
+    "....KLLCCCKDLLLLLLLLCCCK",
+    ".....KCCCCCLLLLLLLLLCCCK",
+    ".....KCCCCCCLLLLLLLCCCK.",
+    ".....KNCCCCCCCLLLLLCCCK.",
+    "....KNNCCCCCCCCLLLCCCK..",
+    "....KNNCCCCCCCCCCCCCCK..",
+    "...KNNNCCCCCCCCCCCCCCK..",
+    "...KNNCCCCCCCCCCCCCCCK..",
+    "..KNNNCCCCCCCCCCCCCCCK..",
+    "..KNNCCCCCCCCCCCCCCCCK..",
+    "..KNNCCCCCCCCCCCCCCCCK..",
+    "..KKKKKKKKKKKKKKKKKKKK.."
+  ],
+  "initial_rows": [
+    "...MM............LLL....",
+    "..MMMM..........LKKKD...",
+    "..MKMMMM.......LKKKKD...",
+    "..MKKMKKMMCCCCLLKKKKD...",
+    "..MCCKKKKKKKKKKKKKKKD...",
+    "..MCCCCKKKKKKKKKKLLKKD..",
+    "..MCCCCCCCCCKKKKKKKKKD..",
+    "...CCCCCCCCKKKKKKKKKKKD.",
+    "...CCCCCCCKKCCCCCCCKKKKD",
+    "....CCCCCKKCCCCKKKCCKKKD",
+    "....CCCKKKCCCCCCKKKKKKKD",
+    "....CCCCCKCCCCCCCCKKKKKD",
+    "....CCCCLLCCCCCCCCCCKKKC",
+    "....CCCNLLCCCCCCCCCCKKKC",
+    ".....CNNLLLCCCCCCCCCKKKC",
+    ".....CNNNLLLCCCCCCCKKKC.",
+    ".....CCNNNLLLLCCCCCLLDC.",
+    "....CCCNNNLLLLLCCCLLLC..",
+    "....CCCNNNNLLLLLLLLLLC..",
+    "...CCCCNNNNNLLLLLLLLLC..",
+    "...CCCNNNNNNLLLLLLLLLC..",
+    "..CCCCNNNNNNNLLLLLLLLC..",
+    "..CCCNNNNNNNNLLLLLLLLC..",
+    "..CCCNNNNNNNNNLLLLLLLC..",
+    "..CCCCCCCCCCCCCCCCCCCC.."
+  ]
+}

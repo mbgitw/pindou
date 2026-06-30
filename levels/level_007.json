@@ -1,0 +1,120 @@
+{
+  "id": "level_007",
+  "name": "Cake Roll Jewel",
+  "width": 26,
+  "height": 29,
+  "storage": {
+	"initial_unlocked": 12,
+	"unlock_per_completed_region": 2
+  },
+  "legend": {
+	"B": "DB",
+	"D": "DK",
+	"G": "GN",
+	"M": "MG",
+	"N": "BR",
+	"O": "OR",
+	"P": "PN",
+	"R": "RD",
+	"V": "VI",
+	"Y": "YL",
+	"W": "WT"
+  },
+  "regions": {
+	"DB": {
+	  "target_color": "#19508c"
+	},
+	"DK": {
+	  "target_color": "#736b46"
+	},
+	"GN": {
+	  "target_color": "#a6d878"
+	},
+	"MG": {
+	  "target_color": "#ea557a"
+	},
+	"BR": {
+	  "target_color": "#a05a2d"
+	},
+	"OR": {
+	  "target_color": "#eb7337"
+	},
+	"PN": {
+	  "target_color": "#f7bfd0"
+	},
+	"RD": {
+	  "target_color": "#e43437"
+	},
+	"VI": {
+	  "target_color": "#b48cf5"
+	},
+	"YL": {
+	  "target_color": "#facd50"
+	},
+	"WT": {
+	  "target_color": "#ffffff"
+	}
+  },
+  "region_rows": [
+	".....DD.....D.............",
+	"....DDD...DDWD............",
+	"....DNDD.DNGNND...........",
+	"....NDDNDNGPPVWD..........",
+	".....DDNNNPPPPPPWD.D......",
+	"......DNDWWWWWWPPDDGD.....",
+	".......DDWDWWWWPNNNDDD....",
+	".....DDPPWBDWWGNNMMNDGD...",
+	"....DPPMMMPWWWPNMPPMRD....",
+	"...NMMMMMMMPWWPNMPPMND....",
+	".DNRRRMMMMRRRRNNRMMNNONN..",
+	".DNRRRPPPPMMMRNNNNNNOODDD.",
+	"DNNRNMPPPGGMMMNNRNOOOONNND",
+	"DNMMMMPMMMMMPMMRRNYOOOOOND",
+	"DNMMPPMMMMRMMPMMMNOYOOONN.",
+	"DNMMGMRMMMMRMMMMMMNONNOND.",
+	"DNRMGMRRPGGMNMMGMRNONNNND.",
+	"DNRMGMRMPPPGMRNGPMNNGNNDD.",
+	"DNMMPPMMPPPMMRMPPMMMPPPND.",
+	"DNMMPPMMMPPPMMMPPMMMPPPNN.",
+	"DNMMPPPMMPPPMMMPPMMMPPPNN.",
+	".DNRMPPPPPPPMMMPPMMMPPPND.",
+	".DNRRRPPPPPMRRMGPMMRMGNN..",
+	"..NDRRMMMMMRRMMMMMMMMMNN..",
+	"...NDDRMMRRMMMMMRMMPMNN...",
+	"....NNNNMMMMPMMRMPPNNN....",
+	"........NNMMMMMMMNNDD.....",
+	"........DDNNNNNNNDD.......",
+    "..........DDDDDDD........."
+  ],
+  "initial_rows": [
+	".....MM.....M.............",
+	"....NMM...MMPM............",
+	"....MMMM.PMMWWW...........",
+	"....DMPPPMWWNNNN..........",
+	".....MPMPRMWNNNNPN.M......",
+	"......PPPPPPNPNMNNWWW.....",
+	".......NPDMPMMPNPRMMPM....",
+	".....NMDDMMMDNNMPNNMMMM...",
+	"....ODMPGPMMMNNMNMMPMR....",
+	"...MDDDRDRRMMNNWNNNNGM....",
+	".MMMMMDDDRNMGPDDNNNMWNMO..",
+	".MMMMMDDDMDDRNGPWMMWWDNNN.",
+	"MMMNPPMMMMNNGPDDDDMPMDMMDR",
+	"NBGPPPGGPDDNDDDDMDDPPDDDYM",
+	"MOOPMMPNPNMWDDDPDMPPMDDDM.",
+	"RRRNMNNNOVDMPPWNNNPPMWMPW.",
+	"RRONNNNNNOMPPPGNNPMNRPPWW.",
+	"MDMNRRNNNOOMNMMNMWRONPDPN.",
+	"PDDDDDPPGNNPNNNRRDNRRMMDP.",
+	"RMDDDGPPPMNNNPNRRRRRMRMPP.",
+	"GMDPRGOPPNMNRRRMMPNRRMNPM.",
+	".MMPPNMMMNRNRRRMMDROMRNPM.",
+	".MMMMPDMMNNNPNRPMPNMDPPP..",
+	"..MMPMPPPNNNNNNGGGPDPNMM..",
+	"...MMMPPPDDDNNDPMWNOOMM...",
+	"....MMDDDDDDMNDMYMOROP....",
+	"........DDDDDRNPDMOMM.....",
+	"........OGMDMMMMMMM.......",
+    "..........ONMMGMM........."
+  ]
+}

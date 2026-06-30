@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b8j7gpfbvrfcm"]
+
+[ext_resource type="Theme" uid="uid://dn2uenaxgf1nr" path="res://themes/dev_panel_theme.tres" id="1_dev_theme"]
+
+[node name="DevPanel" type="PanelContainer" unique_id=441872827]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -410.0
+offset_bottom = 62.0
+grow_horizontal = 0
+theme = ExtResource("1_dev_theme")
+
+[node name="Row" type="HBoxContainer" parent="." unique_id=1843411747]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="PreviousButton" type="Button" parent="Row" unique_id=1855166179]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="LevelLabel" type="Label" parent="Row" unique_id=1227418932]
+custom_minimum_size = Vector2(132, 42)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="Row" unique_id=327319128]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="ResetButton" type="Button" parent="Row" unique_id=1748004194]
+custom_minimum_size = Vector2(76, 42)
+layout_mode = 2
+focus_mode = 0
+text = "Reset"
+
+[node name="HomeButton" type="Button" parent="Row" unique_id=1613748150]
+custom_minimum_size = Vector2(70, 42)
+layout_mode = 2
+focus_mode = 0
+text = "Home"

@@ -1,0 +1,114 @@
+{
+  "id": "level_010",
+  "name": "Banana Jewel",
+  "width": 21,
+  "height": 34,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "K": "BK",
+    "M": "BR",
+    "N": "TN",
+    "P": "PN",
+    "S": "SK",
+    "W": "WT",
+    "Y": "YL"
+  },
+  "regions": {
+    "BK": {
+      "target_color": "#202020"
+    },
+    "BR": {
+      "target_color": "#8f684c"
+    },
+    "TN": {
+      "target_color": "#b89463"
+    },
+    "PN": {
+      "target_color": "#eaa5b0"
+    },
+    "SK": {
+      "target_color": "#edd4ab"
+    },
+    "WT": {
+      "target_color": "#ffffff"
+    },
+    "YL": {
+      "target_color": "#f3d36c"
+    }
+  },
+  "region_rows": [
+    ".....................",
+    ".....................",
+    ".........MMM.........",
+    ".........MMM.........",
+    ".........MMM.........",
+    "........MMMM.........",
+    ".......NMYMMM........",
+    ".......MMYMYYN.......",
+    "......MMYYYYYYM......",
+    "......MYMYYYYYYM.....",
+    "......MMMYMMYMMYM....",
+    ".....NYMMMMMYMYYM....",
+    ".....MMMSSSSMMYYM....",
+    ".....MSSSSSSSMMYN....",
+    "....MSSSSSSSSSMYN....",
+    "....MSSSSSSSSSMMM....",
+    "....MSKKWSWKKSMYM....",
+    "....MWKKWWWKKWMMM....",
+    ".....MWWWPWWWWMMM....",
+    ".....MMWPWPWMMYYM....",
+    ".....MYMMMMMMMMYN....",
+    ".....NYMMMMMYMYNM....",
+    "....MMYYYYYMMMMMSM...",
+    "...MSMYYYYYYYYMMSSM..",
+    "..MSSMYYMMYMYYYNSSM..",
+    "..MSSMYMMMMMMMMMSMM..",
+    "..MMMMMMMMYMYYYMMM...",
+    ".....MMYMYMMMMYN.....",
+    ".....MMYYYYYYYYM.....",
+    "......MYYMYMYMYM.....",
+    ".....MMMMNMMMNNN.....",
+    ".....NSSSM.MSSSM.....",
+    "......MNNM.MNNMM.....",
+    "....................."
+  ],
+  "initial_rows": [
+    ".....................",
+    ".....................",
+    ".........KKK.........",
+    ".........KKK.........",
+    ".........SKK.........",
+    "........SSSS.........",
+    ".......MSMSSS........",
+    ".......SSMSMMM.......",
+    "......SSMMMMMMS......",
+    "......SMSMMMMMMS.....",
+    "......SSSMSSMSSMS....",
+    ".....MMSSSSSMSMMS....",
+    ".....SSSMMMMSSMMS....",
+    ".....SMMMMMMMSSMM....",
+    "....SMMMMMMMMMWMM....",
+    "....SMMMMMMMMMWWW....",
+    "....SMMMMMMMMMWMW....",
+    "....SMMMMMMMMMWWW....",
+    ".....SMMMMMMMMWWW....",
+    ".....SSMMMMMWWMMP....",
+    ".....YMYYYWWWPPMM....",
+    ".....MMYYYYYMYMMY....",
+    "....YYMMMMMYYYYYMY...",
+    "...YMYMMMMMMMMYYMMN..",
+    "..YMMYMMYYMYMMMMMMN..",
+    "..YMMYMYYYYYYYYYMNN..",
+    "..YYYYYYYYMYMMMNNN...",
+    ".....YYMYMYYYYMM.....",
+    ".....YYMMMMMMMMN.....",
+    "......YMMYMYMNNN.....",
+    ".....YYYYMYYNYYY.....",
+    ".....MMMMY.YNNNN.....",
+    "......YMYY.NYYNN.....",
+    "....................."
+  ]
+}

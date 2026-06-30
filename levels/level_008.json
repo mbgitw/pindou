@@ -1,0 +1,132 @@
+{
+  "id": "level_004",
+  "name": "Lucky Cat Jewel",
+  "width": 37,
+  "height": 39,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "K": "BK",
+    "P": "PN",
+    "R": "DP",
+    "C": "CR",
+    "O": "OR",
+    "B": "CY",
+    "D": "DB",
+    "W": "WT",
+    "L": "LB"
+  },
+  "regions": {
+    "WT": {
+      "target_color": "#ffffff"
+    },
+    "BK": {
+      "target_color": "#736b46"
+    },
+    "PN": {
+      "target_color": "#f7bfd0"
+    },
+    "DP": {
+      "target_color": "#e94d73"
+    },
+    "CR": {
+      "target_color": "#f4efdf"
+    },
+    "OR": {
+      "target_color": "#f4a04d"
+    },
+    "CY": {
+      "target_color": "#36b8dc"
+    },
+    "DB": {
+      "target_color": "#1a4d87"
+    },
+    "LB": {
+      "target_color": "#96d2f5"
+    }
+  },
+  "region_rows": [
+    "..............KKKKK..................",
+    ".............KPPPPPKK................",
+    "............KPPPPPPPPK...............",
+    "...........KPPPPKKPPPK...............",
+    "...........KPPPKWWKPPK...............",
+    "...........KPPPKKKKRKKKK.............",
+    "...........KKPRPPPPRPPPPKK...........",
+    ".........KKKKRRPPPPPPPPPPPKK.........",
+    "........KPPPPPRPPPPPPPPPPPPPK........",
+    ".......KPPPPPPPPPPPPPPPPPPPPPK.......",
+    "......KPPPPPPPPPPPPPPPPPPPPPPPK......",
+    ".....KPPPWWPPPPPPPPPPPPPPPPPPPPK.....",
+    ".....KPPWWWPPRPPPPRPPPPPPPPPPPPKK....",
+    "....KPPPWWPWWRPWPWWPRPPWWPPPPPPPK....",
+    "....KPPPPPPWPRPWWWWWPRPWWPPPPPPPK....",
+    "...KPPPPPPPPRPPWWWPPPRPPPPPPPPPPPK...",
+    "...KPPPPPPPPKPPPWPPPPRPPPPPPPPPPPK...",
+    "...KPRPPPRPKCKPPPPPPPKPPPPPPPPPPPK...",
+    "..KPPRPPPRPKCKPPPPPPKCKPPRPPPPPPPK...",
+    "..KPPRPPPRPKWKPPPPPPKCKPPPRPPPPRPK...",
+    ".KPPRPPPPPPKKKKPPPPPKKKPPPRPPPPRPPK..",
+    "KKPPRPPPPKRKWOKKPPPKBWKKRKPPPPPRPPPK.",
+    ".KPPPRPPPKCOWOOCKKKWBWBBCKPPPPPRPPPPK",
+    "..KPPRPPPKWOOOOCWWCCBBBB.KPPPPPRPKKKK",
+    "..KKKRRRPKPOOOOPCWCPBBBBPKPPPPPRPK...",
+    ".....KKPRKPPOOPPWWWPPBBPKPPPPKRPK....",
+    ".......KPPKPPPPWWWCPPPPPKPPKKRPPK....",
+    ".......PKPKPPPCWWWWCPPPKKKKRRPPPK....",
+    "......KPKPPKKKKKKBKKKKKPPPPPPPPPPK...",
+    "......KKPPPPPKKKWKKWKKWKPPPPPPPPPK...",
+    ".....KPKPPPPKWKWWBKWWKWWKKPPPPPPPK...",
+    ".....KPKPPPKWWKKKBBKKKWWWKPPPPPPPK...",
+    ".....KPPPRPKWKWWKBBKWWKWWKPPPRPPPK...",
+    ".....KPPPRPPKKKKKKKKKKKKKPPPPRPPPK...",
+    ".....KPPPKPPPKDDDDDDDDDKPPPPKKPPK....",
+    "......KPK.KPPKKDDDDDDDKKPPPK.KPK.....",
+    ".......KK..KKKKWWWKKWWWKKKK..KK......",
+    "........K.....KLLK..KLLK.............",
+    "...............KK....KK.............."
+  ],
+  "initial_rows": [
+    "..............PPPPP..................",
+    ".............PKKKKWPP................",
+    "............PKKKKKKWPP...............",
+    "...........PKPWRPPCPLP...............",
+    "...........PKKKPPPPKKP...............",
+    "...........PKKKPPPPPPPPP.............",
+    "...........PPKPKKPKPCWKWPP...........",
+    ".........PPPPPPORKPDCWWWKKPP.........",
+    "........PKKKKKPKKKRRKKKWBBBWP........",
+    ".......PKRRRKWWKKKKKKPWPPKPKKP.......",
+    "......PKKPPKPKKKKKPKPKKKRRRWKKP......",
+    ".....PWWWPPORRKKWWKKWKKKPKRKBPWP.....",
+    ".....PPKPPPKKPKKKKPCPWKKRKKKKKPPP....",
+    "....PCWKPPKPPPKPKPPKPWWPPKKKKKWWP....",
+    "....PCWWWOKPKPKPPPPPKPRPPDKPKKWPP....",
+    "...PPRRRRKKKPWWPPPKKKPKPKKKKKKWWRP...",
+    "...PRRRPWWWWPRPKPKBKPPDPKKKKKKWBBP...",
+    "...PWPPKBPWPPPBPPWWKPPKKKWWDKPKBBP...",
+    "..PPWPRRCPWPPPPCCCWKPPPRKPWPKKKKWP...",
+    "..PKKPKWKPWPPPKKKKKKPPPKKDPKKKPPWP...",
+    ".PRKPKBKKOOPPPPWKKKKPPPKKKPKKKKPCPP..",
+    "PPKKPKKKKPPPPPPPWKDPPPPPPPKCPKKPOKCP.",
+    ".PPPKPPLKPPPPPPPPPPPPPPPPPWKPPKPKKKKP",
+    "..PPPPKWDPPPPPPPPPPPPPPP.PPKKKKPKPPPP",
+    "..PPPPPPWPKPPPPDPPPRPPPPKPKORDKPPP...",
+    ".....PPPPPDDPPWPPPPRRPPBPWKOOPPKP....",
+    ".......PKKPKKKPPPPPPKBBBPWPPPPKKP....",
+    ".......RPDPDKKPPPPPPKKPPPPPPPRKBP....",
+    "......PRPKRPPPPPPPPPPPPWKKKWRRDRKP...",
+    "......PPKPKKCPPPPPPPPPPPBOKWWKPKDP...",
+    ".....PWPWRPKPPPPPPPPPPPPPPKRRPLWLP...",
+    ".....PWPWRRPPPPPPPPPPPPPPPPRRWPKPP...",
+    ".....PPKWPKPPPPPPPPPPPPPPPOPKPKKRP...",
+    ".....PKRWPKPPPPPPPPPPPPPPBKPKPPPKP...",
+    ".....PPOPPPWDPPPPPPPPPPPBPPKPPOOP....",
+    "......PPP.PCKPPPPPPPPPPPKKKP.PWP.....",
+    ".......PP..PPPPPPPPPPPPPPPP..PP......",
+    "........P.....PPPP..PPPP.............",
+    "...............PP....PP.............."
+  ]
+}

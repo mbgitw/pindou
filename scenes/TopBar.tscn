@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dnodroqxvf2v5"]
+
+[ext_resource type="Theme" path="res://themes/top_bar_theme.tres" id="1_top_theme"]
+[ext_resource type="Texture2D" uid="uid://bvrmotof45y47" path="res://textures/staniba_bar.png" id="2_vdbop"]
+[ext_resource type="Texture2D" uid="uid://nlayrn1fnq26" path="res://textures/staniba_bolt.png" id="3_vdbop"]
+[ext_resource type="Texture2D" uid="uid://5kmccvlae484" path="res://textures/staniba_plus.png" id="4_wjcpy"]
+
+[node name="TopBar" type="Control" unique_id=937645155]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 271.0
+offset_bottom = 128.0
+mouse_filter = 2
+theme = ExtResource("1_top_theme")
+
+[node name="StaminaBar" type="TextureRect" parent="." unique_id=32414229]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -108.5
+offset_top = 11.0
+offset_right = 109.0
+offset_bottom = 98.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("2_vdbop")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StaminaCount" type="Label" parent="StaminaBar" unique_id=1035377108]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -25.0
+offset_right = 63.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"TopBarStaminaCount"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaminaTimer" type="Label" parent="StaminaBar" unique_id=846746172]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 26.5
+offset_right = 64.0
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"TopBarStaminaTimer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaminaBolt" type="TextureRect" parent="StaminaBar" unique_id=1910010539]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.5
+offset_top = -34.5
+offset_right = -58.5
+offset_bottom = 36.275513
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_vdbop")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="StaminaPlus" type="TextureRect" parent="StaminaBar" unique_id=1758712111]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 59.5
+offset_top = -19.72
+offset_right = 100.04059
+offset_bottom = 19.720001
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_wjcpy")
+expand_mode = 1
+stretch_mode = 6

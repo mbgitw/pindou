@@ -1,0 +1,100 @@
+{
+  "id": "level_013",
+  "name": "Green Monster Jewel",
+  "width": 30,
+  "height": 33,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "D": "DG",
+    "G": "GN",
+    "K": "BK",
+    "L": "LG"
+  },
+  "regions": {
+    "DG": {
+      "target_color": "#4c8f4e"
+    },
+    "GN": {
+      "target_color": "#5eb05f"
+    },
+    "BK": {
+      "target_color": "#0e2414"
+    },
+    "LG": {
+      "target_color": "#82c872"
+    }
+  },
+  "region_rows": [
+    "..........LKKKK.......KKK.....",
+    "..........KDLDK......KLLK.....",
+    "..........KDGDK......KLLK.....",
+    "..........KKKD.......KGK......",
+    ".........KDDKD......KLLK......",
+    ".........KDKL...KKK.KLK.......",
+    ".........KDKKKKKLGKKKLK.......",
+    "........KKDGLGGLLGLLKLKK......",
+    ".....KKKLLGGGGGLLGLLLLLGKK....",
+    "....KLLGLGGDGGGLLGGLLLLLLLK...",
+    ".....KLLGGGDGGGGGGGLLLLLLLK...",
+    ".KKKKLLLGGGDGGGGGGGLLLLLLLGKKK",
+    "KGGDDGGGGGGDGGGGGGGGGLLLLLGDDK",
+    "KGGGGDGGDDDDDDDDDDDDGDDGGGGKKK",
+    "KLGGGGGGGGGDDDDDGGGGGDGLLLLGKK",
+    "DKDDGGGGKKKKKDDDGGGGGGKKKKLLKD",
+    ".KKDDGGGKKKKKKDGGGGGGKKKKKLKK.",
+    "..KDGGGGKDGKKKKGGGGGGKKLLKLK..",
+    "...KGGGGGKKKKKKDDGGGGKDKKLLK..",
+    "...KDDGGGGKKKKKDDDDDDKKKGGGKL.",
+    "...KDDDDGGGDGGGGGGGGGGGGGGGDK.",
+    "..KLGGGLGGDDDDGGGGKKKLGLGLLGK.",
+    "..KKLGGLLDGDGGGGGGGKLLLGLGLLK.",
+    "...KLGGLLLGGGGGLLGKLKLLLLLLLK.",
+    "....KGGGLLGGGGGDDKLLLKGLLLLK..",
+    "....KGGGGLGGGGGLLGLLLLLLLLK...",
+    "....KLGGGGDDLGGLLGLLLLLLLKK...",
+    "...KLGGGGGDDDDGLLGLLLLGGGLLK..",
+    "...KLGGGGGDDDDDDGDDGGGGLLLLK..",
+    "..KLGGGGGGDDDDDDGGLLLLLLLLLLK.",
+    "..KLGGGGGGDDDDGLLGLLLLLLLLLLK.",
+    "..KLGGGGGGDDLGGLLGLLLLLLLLLLK.",
+    "...KLGGGGLGDLGGLLGLLLLLLLLLK.."
+  ],
+  "initial_rows": [
+    "..........KLLLL.......LLL.....",
+    "..........LKKKL......LKKL.....",
+    "..........GKKKL......LKKL.....",
+    "..........GLLK.......LKL......",
+    ".........GKKLK......LKKL......",
+    ".........GKGK...LLL.LKL.......",
+    ".........GKGLLLLKKLLLKL.......",
+    "........GGKKKKKKKKKKLKLL......",
+    ".....DGGKKKKKKKKKKKKKKKKLL....",
+    "....DDGKKKKKKKKKKKKKKKKKKKL...",
+    ".....GGGKKKKKKKKKKKKKKKKKKL...",
+    ".DDDDGGGDKKKKKKKKKKKKKKKKKKLLL",
+    "DDDGGDDDDKKGKKKKKKKKKKKKKKKKKL",
+    "DDDDDGDDGGGGGGKKKKKKKKKKKKKLLL",
+    "DDDDDDDDDDLGGGGGKKKKKKKKKKKKLL",
+    "GDGGDDDDGGGGGGGGLLLKKKLLLLKKLK",
+    ".DDGGDDDGGGGGGGLLLLLLLLLLLKLL.",
+    "..DGDDDDGGLGGGGLLLLLLLLKKLKL..",
+    "...GDDDDDGGGGGGGGLLLLLLLLKKL..",
+    "...GGGDDDDGGGGGGGGLLLLLLLLLLK.",
+    "...GGGGGDDLGLLLLLLLLLLLLLLLLL.",
+    "..GGDDDGDDGGGGLLLLGLLGLGLGGLL.",
+    "..GGGDDGGGLGLLLLLLLLGGGLGLGGL.",
+    "...GGDDGGGLLLLLGGLGGLGGGGGGGL.",
+    "....GDDDGGLLLLLGGGGGGLLGGGGL..",
+    "....GDDDDGLLLLLGGLGGGGGGGGL...",
+    "....GGDDDLGGGLLGGLGGGGGGGLL...",
+    "...GGDDDDLGGGGLGGLGGGGLLLGGL..",
+    "...GGDDDDLGGGGGGLGGLLLLGGGGL..",
+    "..GGDDDDDLGGGGGGLLGGGGGGGGGGL.",
+    "..GGDDDDDLGGGGLGGLGGGGGGGGGGL.",
+    "..GGDDDDDLGGGLLGGLGGGGGGGGGGL.",
+    "...GGDDDDGLGGLLGGLGGGGGGGGGL.."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "level_003",
+  "name": "Bunny Jewel",
+  "width": 17,
+  "height": 20,
+  "storage": {
+	"initial_unlocked": 12,
+	"unlock_per_completed_region": 2
+  },
+  "regions": {
+	"BR": { "target_color": "#b67b34" },
+	"YL": { "target_color": "#fbfcae" },
+	"PK": { "target_color": "#f4cccc" },
+	"WH": { "target_color": "#ffffff" }
+  },
+  "region_map": [
+	[null, null, null, null, null, null, "BR", "BR", null, "BR", "BR", null, null, null, null, null, null],
+	[null, null, null, null, null, "BR", "PK", "YL", "BR", "YL", "PK", "BR", null, null, null, null, null],
+	[null, null, null, null, null, "BR", "PK", "YL", "BR", "YL", "PK", "BR", null, null, null, null, null],
+	[null, null, null, null, null, "BR", "PK", "YL", "BR", "YL", "PK", "BR", null, null, null, null, null],
+	[null, null, null, null, null, "BR", "PK", "YL", "BR", "YL", "PK", "BR", null, null, null, null, null],
+	[null, null, null, null, null, "BR", "PK", "YL", "BR", "YL", "PK", "BR", null, null, null, null, null],
+	[null, null, null, null, null, "BR", "PK", "YL", "BR", "YL", "PK", "BR", null, null, null, null, null],
+	[null, null, null, "BR", "BR", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "BR", "BR", null, null, null],
+	[null, null, "BR", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "BR", null, null],
+	[null, "BR", "YL", "YL", "BR", "BR", "YL", "YL", "YL", "YL", "YL", "BR", "BR", "YL", "YL", "BR", null],
+	[null, "BR", "YL", "BR", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "BR", "YL", "BR", null],
+	["BR", "YL", "YL", "YL", "YL", "BR", "YL", "YL", "YL", "YL", "YL", "BR", "YL", "YL", "YL", "YL", "BR"],
+	["BR", "YL", "YL", "YL", "BR", "WH", "BR", "YL", "YL", "YL", "BR", "WH", "BR", "YL", "YL", "YL", "BR"],
+	["BR", "YL", "YL", "YL", "BR", "BR", "BR", "YL", "YL", "YL", "BR", "BR", "BR", "YL", "YL", "YL", "BR"],
+	["BR", "YL", "PK", "PK", "PK", "BR", "YL", "YL", "BR", "YL", "YL", "BR", "PK", "PK", "PK", "YL", "BR"],
+	["BR", "YL", "PK", "PK", "PK", "YL", "YL", "BR", "BR", "BR", "YL", "YL", "PK", "PK", "PK", "YL", "BR"],
+	[null, "BR", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "BR", null],
+	[null, "BR", "YL", "YL", "YL", "YL", "YL", "YL", "BR", "YL", "YL", "YL", "YL", "YL", "YL", "BR", null],
+	[null, null, "BR", "BR", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "BR", "BR", null, null],
+	[null, null, null, null, "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", null, null, null, null]
+  ],
+  "initial_gems": [
+	[null, null, null, null, null, null, "YL", "YL", null, "YL", "YL", null, null, null, null, null, null],
+	[null, null, null, null, null, "YL", "YL", "BR", "YL", "BR", "YL", "YL", null, null, null, null, null],
+	[null, null, null, null, null, "YL", "YL", "BR", "YL", "BR", "YL", "YL", null, null, null, null, null],
+	[null, null, null, null, null, "YL", "YL", "BR", "YL", "BR", "YL", "YL", null, null, null, null, null],
+	[null, null, null, null, null, "YL", "YL", "BR", "YL", "BR", "YL", "YL", null, null, null, null, null],
+	[null, null, null, null, null, "YL", "YL", "BR", "YL", "BR", "YL", "YL", null, null, null, null, null],
+	[null, null, null, null, null, "YL", "YL", "BR", "YL", "BR", "YL", "YL", null, null, null, null, null],
+	[null, null, null, "YL", "YL", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "YL", "YL", null, null, null],
+	[null, null, "YL", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "YL", null, null],
+	[null, "YL", "BR", "BR", "YL", "YL", "BR", "BR", "BR", "BR", "BR", "YL", "YL", "BR", "BR", "YL", null],
+	[null, "YL", "BR", "YL", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "BR", "YL", "BR", "YL", null],
+	["YL", "BR", "BR", "BR", "BR", "YL", "BR", "BR", "BR", "BR", "BR", "YL", "BR", "BR", "BR", "BR", "YL"],
+	["YL", "BR", "BR", "BR", "YL", "WH", "YL", "BR", "BR", "BR", "YL", "WH", "YL", "BR", "BR", "BR", "YL"],
+	["YL", "BR", "BR", "BR", "YL", "YL", "YL", "BR", "BR", "BR", "YL", "YL", "YL", "BR", "BR", "BR", "YL"],
+	["YL", "BR", "YL", "YL", "YL", "YL", "BR", "BR", "YL", "PK", "PK", "YL", "YL", "YL", "YL", "PK", "YL"],
+	["YL", "PK", "YL", "YL", "YL", "PK", "PK", "YL", "YL", "YL", "PK", "PK", "YL", "YL", "YL", "PK", "YL"],
+	[null, "YL", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "PK", "YL", null],
+	[null, "YL", "PK", "PK", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", null],
+	[null, null, "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", null, null],
+	[null, null, null, null, "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", "YL", null, null, null, null]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "level_001",
+  "name": "First Jewel",
+  "width": 4,
+  "height": 5,
+  "storage": {
+	"initial_unlocked": 12,
+	"unlock_per_completed_region": 2
+  },
+  "regions": {
+	"A": { "target_color": "#e95d70" },
+	"B": { "target_color": "#35b1ff" }
+  },
+  "region_map": [
+	["A", "A", "B", "B"],
+	["A", "A", "B", "B"],
+	["A", "A", "B", "B"],
+	["A", "A", "B", "B"],
+	["A", "A", "B", "B"]
+  ],
+  "initial_gems": [
+	["B", "B", "R", "R"],
+	["B", "B", "R", "R"],
+	["B", "B", "R", "R"],
+	["B", "B", "R", "R"],
+	["B", "B", "R", "R"]
+  ]
+}

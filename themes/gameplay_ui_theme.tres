@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://jfof5xtbtu84"]
+
+[ext_resource type="FontFile" path="res://font/方正胖头鱼简体.TTF" id="1_font"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_storage_panel"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 0.945098, 0.870588, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.941176, 0.752941, 0.603922, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_storage_slot"]
+
+[resource]
+default_font = ExtResource("1_font")
+LevelTitle/base_type = &"Label"
+LevelTitle/colors/font_color = Color(0.376471, 0.231373, 0.152941, 1)
+LevelTitle/font_sizes/font_size = 28
+StoragePanel/base_type = &"PanelContainer"
+StoragePanel/styles/panel = SubResource("StyleBoxFlat_storage_panel")
+StorageSlot/base_type = &"Button"
+StorageSlot/styles/disabled = SubResource("StyleBoxEmpty_storage_slot")
+StorageSlot/styles/focus = SubResource("StyleBoxEmpty_storage_slot")
+StorageSlot/styles/hover = SubResource("StyleBoxEmpty_storage_slot")
+StorageSlot/styles/normal = SubResource("StyleBoxEmpty_storage_slot")
+StorageSlot/styles/pressed = SubResource("StyleBoxEmpty_storage_slot")

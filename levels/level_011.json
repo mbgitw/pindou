@@ -1,0 +1,92 @@
+{
+  "id": "level_011",
+  "name": "Eye Jewel",
+  "width": 21,
+  "height": 21,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "C": "CR",
+    "D": "DB",
+    "K": "BK",
+    "L": "LP",
+    "M": "MG",
+    "P": "PN",
+    "R": "RS",
+    "W": "WT"
+  },
+  "regions": {
+    "CR": {
+      "target_color": "#fff4e4"
+    },
+    "DB": {
+      "target_color": "#7e473f"
+    },
+    "BK": {
+      "target_color": "#35172c"
+    },
+    "LP": {
+      "target_color": "#f4c7d0"
+    },
+    "MG": {
+      "target_color": "#a85068"
+    },
+    "PN": {
+      "target_color": "#f9d8df"
+    },
+    "RS": {
+      "target_color": "#d58b9b"
+    },
+    "WT": {
+      "target_color": "#ffffff"
+    }
+  },
+  "region_rows": [
+    ".....................",
+    "........LLLLL........",
+    "......LLRPPPRLL......",
+    "....LLRPPCCCCCCLL....",
+    "...LRRPCCCCKKKCCRL...",
+    "...LLRCCCKKLLDKKCL...",
+    "..MRPCRCCKLRDLKKCCL..",
+    "..MRCCCCKDRKKKDDKCL..",
+    ".MRPCCCCKKDKKKLLKCPL.",
+    ".MRPCCCCKLMKKKDDKCPL.",
+    ".MLRCCCCWKDLDLLKCCRL.",
+    ".MRLPPCCCKKLLDKKCCPL.",
+    ".MRRLRCCCCCKKKCCCPRL.",
+    "..MRRCCCCCCCCCCCRPL..",
+    "..MRRRCCCCCCCCCCRRL..",
+    "...MRRRPPPCCCCPPRL...",
+    "...MRRLRRRPPPPPRRL...",
+    "....MMRRRLRRRRRLL....",
+    "......MMRLRRRMM......",
+    "........MMMMM........",
+    "....................."
+  ],
+  "initial_rows": [
+    ".....................",
+    "........CCDDD........",
+    "......CCLLLLLDD......",
+    "....MCLLLLLLLLLDD....",
+    "...MLLLLLLLLLLLLDD...",
+    "...MCLLLLLLCCLLLRR...",
+    "..CMCLCLLLCLLDLRRRR..",
+    "..CCMMLLCCLLLLRRRRR..",
+    ".CMCMMMLCCCCCCRRRRRR.",
+    ".CCCMMMMCCCCCRRRRRRR.",
+    ".CCCMMMMCCCCCRRRRRDR.",
+    ".CCCCCMMMCCCCRRRRRRR.",
+    ".CCCCCMPPPKCCRRRRRKR.",
+    "..CCCMPPPPKKKKRRKRR..",
+    "..CCCCPPPPKKKKKRKKR..",
+    "...CCCCCCCPKKKKRKR...",
+    "...CCCCCCCCCKKKKKR...",
+    "....PPPPPPCKKKKKW....",
+    "......PPPPPKKKK......",
+    "........PPPKK........",
+    "....................."
+  ]
+}

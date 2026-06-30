@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://textures/slot.png" id="1_slot"]
+[ext_resource type="Texture2D" path="res://textures/bean.png" id="2_bean"]
+
+[node name="StorageSlot" type="Button"]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+theme_type_variation = &"StorageSlot"
+focus_mode = 0
+clip_text = true
+clip_contents = false
+
+[node name="StorageSlotTexture" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("1_slot")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="StorageBeanTexture" type="TextureRect" parent="."]
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("2_bean")
+expand_mode = 1
+stretch_mode = 0

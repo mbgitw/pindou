@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://kghn1vvycxje"]
+
+[ext_resource type="Theme" uid="uid://vxk6v2d6ysrd" path="res://themes/home_screen_theme.tres" id="1_home_theme"]
+
+[node name="HomeScreen" type="Control" unique_id=1126567324]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_home_theme")
+
+[node name="HomeBackground" type="ColorRect" parent="." unique_id=618463354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.76256007, 0.97451276, 0.9505109, 1)
+
+[node name="HeroGlow" type="ColorRect" parent="." unique_id=1983169984]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -220.0
+offset_right = 120.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.82, 0.48, 0.24)
+
+[node name="HomeCard" type="PanelContainer" parent="." unique_id=3692232]
+custom_minimum_size = Vector2(420, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -350.0
+offset_right = 210.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HomeCard"
+
+[node name="Content" type="VBoxContainer" parent="HomeCard" unique_id=122334571]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="LevelLabelSlot" type="Control" parent="HomeCard/Content"]
+custom_minimum_size = Vector2(260, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LevelLabel" type="Label" parent="HomeCard/Content/LevelLabelSlot" unique_id=127605974]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -18.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_type_variation = &"HomeLevelLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PreviewFrame" type="PanelContainer" parent="HomeCard/Content" unique_id=1649947018]
+custom_minimum_size = Vector2(260, 320)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"HomePreviewFrame"
+
+[node name="PreviewGrid" type="GridContainer" parent="HomeCard/Content/PreviewFrame" unique_id=1659898121]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="StartButton" type="Button" parent="HomeCard/Content" unique_id=1061218459]
+custom_minimum_size = Vector2(260, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_type_variation = &"HomeStartButton"
+text = "开始"
+
+[node name="CatalogButton" type="Button" parent="HomeCard/Content"]
+custom_minimum_size = Vector2(260, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_type_variation = &"HomeStartButton"
+text = "图鉴"
+
+[node name="CatalogPage" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CatalogCard" type="PanelContainer" parent="CatalogPage"]
+custom_minimum_size = Vector2(460, 760)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -380.0
+offset_right = 230.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HomePreviewFrame"
+
+[node name="CatalogContent" type="VBoxContainer" parent="CatalogPage/CatalogCard"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="CatalogHeader" type="HBoxContainer" parent="CatalogPage/CatalogCard/CatalogContent"]
+layout_mode = 2
+
+[node name="CatalogTitle" type="Label" parent="CatalogPage/CatalogCard/CatalogContent/CatalogHeader"]
+layout_mode = 2
+theme_type_variation = &"HomeLevelLabel"
+text = "图鉴"
+vertical_alignment = 1
+
+[node name="HeaderSpacer" type="Control" parent="CatalogPage/CatalogCard/CatalogContent/CatalogHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackButton" type="Button" parent="CatalogPage/CatalogCard/CatalogContent/CatalogHeader"]
+custom_minimum_size = Vector2(110, 52)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"HomeStartButton"
+text = "返回"
+
+[node name="CatalogScroll" type="ScrollContainer" parent="CatalogPage/CatalogCard/CatalogContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CatalogGrid" type="GridContainer" parent="CatalogPage/CatalogCard/CatalogContent/CatalogScroll"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 3

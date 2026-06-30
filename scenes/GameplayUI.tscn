@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dgyv1pqvmu6u5"]
+
+[ext_resource type="Theme" uid="uid://jfof5xtbtu84" path="res://themes/gameplay_ui_theme.tres" id="1_gameplay_theme"]
+[ext_resource type="PackedScene" path="res://scenes/StorageSlot.tscn" id="2_storage_slot"]
+
+[node name="GameplayUI" type="Control" unique_id=391747397]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_gameplay_theme")
+
+[node name="LevelTitle" type="Label" parent="." unique_id=1721399655]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_type_variation = &"LevelTitle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StoragePanel" type="PanelContainer" parent="." unique_id=1530548391]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = -250.0
+offset_right = -56.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"StoragePanel"
+
+[node name="StorageBox" type="VBoxContainer" parent="StoragePanel" unique_id=2004579958]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="StorageHeader" type="HBoxContainer" parent="StoragePanel/StorageBox" unique_id=1420374222]
+visible = false
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="StoragePanel/StorageBox/StorageHeader" unique_id=302431293]
+layout_mode = 2
+
+[node name="HeaderSpacer" type="Control" parent="StoragePanel/StorageBox/StorageHeader" unique_id=1076022592]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UnlockedLabel" type="Label" parent="StoragePanel/StorageBox/StorageHeader" unique_id=1470694852]
+layout_mode = 2
+
+[node name="StorageGrid" type="GridContainer" parent="StoragePanel/StorageBox" unique_id=1051155765]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 12
+
+[node name="StorageSlot00" parent="StoragePanel/StorageBox/StorageGrid" unique_id=636599813 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot01" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1773319958 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot02" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1974867333 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot03" parent="StoragePanel/StorageBox/StorageGrid" unique_id=494105175 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot04" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1496201081 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot05" parent="StoragePanel/StorageBox/StorageGrid" unique_id=679166147 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot06" parent="StoragePanel/StorageBox/StorageGrid" unique_id=451067880 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot07" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1922867723 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot08" parent="StoragePanel/StorageBox/StorageGrid" unique_id=923426039 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot09" parent="StoragePanel/StorageBox/StorageGrid" unique_id=412977626 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot10" parent="StoragePanel/StorageBox/StorageGrid" unique_id=651793136 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot11" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1841961508 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot12" parent="StoragePanel/StorageBox/StorageGrid" unique_id=18913629 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot13" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1894107048 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot14" parent="StoragePanel/StorageBox/StorageGrid" unique_id=996297859 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot15" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1706085511 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot16" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1325985457 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot17" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1543104757 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot18" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1105085562 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot19" parent="StoragePanel/StorageBox/StorageGrid" unique_id=843100459 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot20" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1296939448 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot21" parent="StoragePanel/StorageBox/StorageGrid" unique_id=736005385 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot22" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1833546449 instance=ExtResource("2_storage_slot")]
+
+[node name="StorageSlot23" parent="StoragePanel/StorageBox/StorageGrid" unique_id=1951303203 instance=ExtResource("2_storage_slot")]

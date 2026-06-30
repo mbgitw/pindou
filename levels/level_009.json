@@ -1,0 +1,76 @@
+{
+  "id": "level_009",
+  "name": "Koala Jewel",
+  "width": 22,
+  "height": 19,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "B": "CY",
+    "D": "DK",
+    "G": "GY",
+    "S": "LG",
+    "W": "WT"
+  },
+  "regions": {
+    "CY": {
+      "target_color": "#9ee4e8"
+    },
+    "DK": {
+      "target_color": "#3d393b"
+    },
+    "GY": {
+      "target_color": "#817978"
+    },
+    "LG": {
+      "target_color": "#b8adad"
+    },
+    "WT": {
+      "target_color": "#ffffff"
+    }
+  },
+  "region_rows": [
+    "BBBBBBBBBBBBBBBBBBBBBB",
+    "BBBBBBBBBBBBBBBBBBBBBB",
+    "BBBBBBBBSGGGGGGBBBBBBB",
+    "BBBBBBBSGGDDGGGGGGBBBB",
+    "BBBBSSSGGGDDDDDDDDSBBB",
+    "BBBSSSSSGGGSSSSGSDSSBB",
+    "BBBSSDDSSGSSDDGGSDSSBB",
+    "BBBSDDWDSSSDWDDGDDDSBB",
+    "BBBSDDDDSSSDDDDGDGDSBB",
+    "BBSSGDDGGGGGDDGGDSSSBB",
+    "BBSSGGGGGDDGGGGGGSSSBB",
+    "BBSSSGGGGDDSSGGGGSSBBB",
+    "BBSSSSSSGGDSSGGGGSBBBB",
+    "BBBSSSSSSGDGGGGGSSBBBB",
+    "BBBBSSSSSSSSSSSSSBBBBB",
+    "BBBBBSSSSSSGGGSSBBBBBB",
+    "BBBBBBSBBBBBBGSBBBBBBB",
+    "BBBBBBBBBBBBBBBBBBBBBB",
+    "BBBBBBBBBBBBBBBBBBBBBB"
+  ],
+  "initial_rows": [
+    "GGGGGGGGGDDDDDDDDDDDDD",
+    "GGGGGGGGGDDDDDDDDDDDDD",
+    "GGGGGGGGBBBBBBBDDDDDDD",
+    "GGGGGGGBBBBBBBBBBBDDDD",
+    "GGGGBBBBBBBBBBBBBBBDDD",
+    "GGGBBBBBBBBBBBBBBBBBDD",
+    "GGGBBBBBBBBBBBBBBBBBDD",
+    "GGGBBBBBBBBBBBBBBBBBSD",
+    "GGGBBBBBBBBBBBBBBBBBSS",
+    "GGBBBBBBBBBBBBBBBBBBSS",
+    "GGBBBBBBBBBBBBBBBBBDSS",
+    "GGBBBBBBBBBBBBBBBBBSSS",
+    "GGBBBBBBBBBBBBBBSBSSSS",
+    "GGGBBBBBBBBBBBBSBWSSSS",
+    "GGGSBBBBBBBBBBBBBSSSSS",
+    "GGGSSBBBBBBBBSBBSSSSSS",
+    "GGSSSSBSSSSSSSBSSSSSSS",
+    "GSSSSSSSSSSSSSSSSSSSSS",
+    "GSSSSSSSSSSSSSSSSSSSSW"
+  ]
+}

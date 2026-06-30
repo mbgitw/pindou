@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Build outputs and local export/cache folders
+builds/
+export_templates/
+feature_profiles/
+script_templates/
+shader_cache/
+text_editor_themes/
+
+# Local/editor generated files
+*.tmp
+*.log

@@ -1,0 +1,130 @@
+{
+  "id": "level_005",
+  "name": "Flower Pot Jewel",
+  "width": 34,
+  "height": 38,
+  "storage": {
+    "initial_unlocked": 12,
+    "unlock_per_completed_region": 2
+  },
+  "legend": {
+    "B": "DB",
+    "D": "DK",
+    "G": "GN",
+    "K": "BK",
+    "M": "MG",
+    "N": "BR",
+    "P": "PN",
+    "S": "SK",
+    "V": "VI"
+  },
+  "regions": {
+    "DB": {
+      "target_color": "#19508c"
+    },
+    "DK": {
+      "target_color": "#736b46"
+    },
+    "GN": {
+      "target_color": "#a6d878"
+    },
+    "BK": {
+      "target_color": "#736b46"
+    },
+    "MG": {
+      "target_color": "#ea557a"
+    },
+    "BR": {
+      "target_color": "#a05a2d"
+    },
+    "PN": {
+      "target_color": "#f7bfd0"
+    },
+    "SK": {
+      "target_color": "#ffe1b9"
+    },
+    "VI": {
+      "target_color": "#b48cf5"
+    }
+  },
+  "region_rows": [
+    "..........NKKKKD..DKKKKKK.........",
+    "..PDDDDD..NKBBDKDDKDGGGDK.DDDDDP..",
+    "GGDKDDDKGGDDVVBDKDDGGGGGDGKDDDKDGG",
+    "KKKKSGNKKKKDVVVVKSGGSSGSGKKNPPKKKK",
+    "KGGSSGGGDVVVVVVVDSGGSSGGDPPPPPPPMK",
+    "KGGGGGGGDVVVVVVVDGGGGGGGVPPPPPPPMK",
+    "KGGNNNNNDBBBBBBBDNNNNNDDNNNNNNPVNN",
+    "KGGKKKKKKKKKKKKKKKKKKKKKKKKKKKPDD.",
+    "KKKKNNNNNNNNNNNNNNNNNNNNNNNNNKKG..",
+    "PPNKNNNNNNNNNNNNNNNNNNNNNNNNNKP...",
+    "..GKNNNNNNNNNNNNNNNNNNNNNNNNNK....",
+    "..GKNNNNNNNNNNNNNNNNNNNNNNNNNK....",
+    "..GKNNNNNKKKNNNNNNNNNKKDNNNNNK....",
+    "..GKNNNNKKKKNNNNNNNNNKKKKNNNNK....",
+    "..GKNNNNDKKKNNNNNNNNNKKKDNNNNK....",
+    "..GKNNNNNDKDNNNNNNNNNKKDNNNNNK....",
+    "..GKNNNNNNNNNNNNNNNNNNNNNNNNNK....",
+    "..GKNNNNNNNNNNNNNNNNNNNNNNNNNK....",
+    "..GKNNDDNNNNNNNNNNNNNNNNNDNNNK....",
+    "..GKNNDKDDDDDDDDDDDDDDDDDKDNNK....",
+    "..GKNNDKKKKKKKKKKKKKKKKKKKDNNK....",
+    "..GKNNDK...PNKBVNVDDN....KDNNK....",
+    "..GKNNDK...PNKBVVVDDN....KDNNK....",
+    "..GKNNDK...PNKBVVVDDN....KDNNK....",
+    "..GKNNDK...PNKBVVVDDN....KDNNK....",
+    "..GKNNDK...PNKBVVVDDN....KNNNK....",
+    "..GKKKDP...PKKBVVVDKK....PKKKK....",
+    "..PNGNP...PNNNVVVVMNNG....GNNG....",
+    "..........NDPPPPPPPPPKP...........",
+    "..........NDPPPPPPPPPKP...........",
+    "..........NDPSPPPPSPPKP...........",
+    ".........NNMPSSPPSGSPNNG..........",
+    ".........DNMMGGGVGGGMMDG..........",
+    "..........NKKKNGDGDKKKP...........",
+    ".............KGGDSDN..............",
+    ".............KNGDGDD..............",
+    "............GKDDDNDDG.............",
+    "...........PKKKKKKKKK............."
+  ],
+  "initial_rows": [
+    "..........KNNNNP..NNNNNND.........",
+    "..DKNPNN..KNNPNPPNNNNVNVN.NNKNNV..",
+    "PNPNPPNNNNNNNPKNNNNNNNVNNNNNNNNNNN",
+    "NPNNNNKNNNDKKNKDDDDNDNKNNNNDDDDSSN",
+    "NNNNPPNKNNNNKKNKKKDDNBNNNNNNDDKDDS",
+    "NNNKKPNNNKNNNNKNKKNDDBDNNNNNNNDDDS",
+    "NNNDKDKKKGNKNKKKNKKKVKNVKKKPKKNNKD",
+    "NKNNDDPNNNVVNNDNNDVVVNVBBGVNNPNKK.",
+    "NNNNKKKKKKVVKKKKKKVVVKKKKKKPPPPK..",
+    "DDDPDDKKKDKDDKDDKVDPVGGGMMMKKNK...",
+    "..NDDDKKKKKKDDKBDPSDPGGGMMGKKN....",
+    "..NDDDKKKKKKDDDDDDPKVGDKGGGMMM....",
+    "..NVVVDDDNDDDDDKKDDPKGNNGGKKKN....",
+    "..VVVVDDDGBBDDDKKGKPGGGGGGGPKN....",
+    "..VNDDDDKDNBDDDPKKGGKGNGNKPVKN....",
+    "..DNGVSDSNNNKPKKKVGGPNNNKKKGKN....",
+    "..NNGSKVKPKPKPGBBBVBSGGGKKKKKN....",
+    "..NNGKPKKPGDGKPBBKKKPPKPKKKKKN....",
+    "..KDKKNKKKGGGKDKKKKKKGGGKKKKKN....",
+    "..NNKKNNNNNNNNNNNNGKKKGGKPKKKV....",
+    "..KNKKNNNNNNPNNNNNNNGNGGNNKPPN....",
+    "..PNDVNN...NGNGNDNNNG....GNPPN....",
+    "..KNDSNN...NGGNGGDKND....GGPPP....",
+    "..NNPKND...NGGGGGNNND....NGPGN....",
+    "..PNPPNN...NPNNNGNGNG....PNKKB....",
+    "..PNGKNN...NPNPNGNGKK....NKGKN....",
+    "..PNNNNK...NNNNNGGKNN....KDNNN....",
+    "..DDDPD...DDKDNNNNVDDN....NDKN....",
+    "..........DNNNNNNNNKNNN...........",
+    "..........KSNNNNNNNVVNN...........",
+    "..........VNNNKDDDNNNNN...........",
+    ".........VVKNNPNDNNNNVKN..........",
+    ".........NVNPNNNNKNNNNNN..........",
+    "..........KGGGGBGNNNNPN...........",
+    ".............NNKNKNG..............",
+    ".............NKKGKNN..............",
+    "............KNKNNKNNN.............",
+    "...........KNNPSSSSSS............."
+  ]
+}

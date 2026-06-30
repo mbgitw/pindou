@@ -1,0 +1,92 @@
+{
+  "id": "level_006",
+  "name": "Apple Jewel",
+  "width": 26,
+  "height": 25,
+  "storage": {
+	"initial_unlocked": 12,
+	"unlock_per_completed_region": 2
+  },
+  "legend": {
+	"G": "GN",
+	"K": "BK",
+	"P": "PN",
+	"R": "RD",
+	"W": "WT",
+	"Y": "YL"
+  },
+  "regions": {
+	"GN": {
+	  "target_color": "#a6d878"
+	},
+	"BK": {
+	  "target_color": "#736b46"
+	},
+	"PN": {
+	  "target_color": "#f7bfd0"
+	},
+	"RD": {
+	  "target_color": "#e43437"
+	},
+	"WT": {
+	  "target_color": "#ffffff"
+	},
+	"YL": {
+	  "target_color": "#facd50"
+	}
+  },
+  "region_rows": [
+	"..........KKK.............",
+	".........KGGGK............",
+	"..........KGGKWWWKKK......",
+	"..........KGGKKKKGGGK.....",
+	"...........KGKGGGGGGK.....",
+	"......KKKKKKKGGGGGKK......",
+	"....KKRRRRRRRKKKKKRRKK....",
+	"...KRRRRRRRRRRRRRRRRRRK...",
+	"..KRRRRRRRRRRRKKKRRRRRRK..",
+	"..KRRRRRKKKKKKRRKKKRKKRK..",
+	".KRRRRKKWWWWWKRRKRRKRRKRK.",
+	".KRRRKWWWWWWWKRRKRRKRRKRK.",
+	"KRRRRKWWWWWWWWKKWKKKRRKRRK",
+	"KRRRKWWWWWWWWWWWWWWWKKKRRK",
+	"KRRRKWWWWWWWWWWWWWWWWKRRRK",
+	"KRRRKWWWWKWWWWWWKWWWWKRRRK",
+	"KRRRKWWPPKWWWWWWKPPWWKRRRK",
+	".KRRKWKKPWWWYYWWWPKKWKRRK.",
+	".KRRRKWWWWWWWWWWWWWWKRRRK.",
+	"..KRRKKKWWWWWWWWWWKKKRRK..",
+	"..KRRRKWWWWWWWWWWWWKRRRK..",
+	"...KRRRKKKKKKKKKKKKRRRK...",
+	"....KRRRRRRRRRRRRRRRRK....",
+	".....KKRRRRRRRRRRRRKK.....",
+    ".......KKKKKKKKKKKK......."
+  ],
+  "initial_rows": [
+	"..........RRR.............",
+	".........RWWWR............",
+	"..........RWWRKKKRRR......",
+	"..........RWWRRRRWWWR.....",
+	"...........RWRWWWWWWR.....",
+	"......RRRRRRRWWWWWRR......",
+	"....RRWWKKKKKRRRRWKKWR....",
+	"...RWWWWWWKKKKKKKKKKKKW...",
+	"..RWWWWWWWWWKKWWWKKKKKKW..",
+	"..RWWWWWRRRRRWKKWWWKWWKW..",
+	".RWWWWRRRRRKKWKKWKKWKKWKW.",
+	".RWWWRRRRRRKKWKKWKKWKKWKW.",
+	"RWWWWRRRRRRKKYWWYWWWKKWKKW",
+	"RWWWRRRRRRRKGGKKKKKKWWWKKW",
+	"RWWWRRRRRRRGGGGKKKKKKWKKKR",
+	"RWWWRRRRRRGGGGGGWKKKKWKKKR",
+	"RKWWRRRWWRGGGGGGWWWKKWKKKR",
+	".RWWRRRRWRRGWWGKKWWWKWKKR.",
+	".RKKWRRRRRRKGGKKPPPPWKKKR.",
+	"..RKKRRRRRRKKKKKPPWWRKKR..",
+	"..RKKKRRRRRKKKKKKKKRKKKR..",
+	"...RKKKRRRRRRRRRRRRKKKR...",
+	"....RKKKKKKKKKKKKKKKKR....",
+	".....RRKKKKKKKKKKKKRR.....",
+    ".......RRRRRRRRRRRR......."
+  ]
+}
